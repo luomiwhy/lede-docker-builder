@@ -12,6 +12,12 @@ docker build -t lede .
 
 ```
 docker run --rm -it -v $(pwd)/../data:/workdir lede
+
+export http_proxy=http://192.168.168.159:7890/
+export https_proxy=http://192.168.168.159:7890/
+export ftp_proxy=http://192.168.168.159:7890/
+
+
 git clone --depth 1 https://github.com/coolsnowwolf/lede -b master openwrt
 
 cd openwrt
