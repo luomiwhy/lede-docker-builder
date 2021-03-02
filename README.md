@@ -18,7 +18,15 @@ export https_proxy=http://192.168.168.159:7890/
 export ftp_proxy=http://192.168.168.159:7890/
 
 
-git clone --depth 1 https://github.com/coolsnowwolf/lede -b master openwrt
+git clone --depth 1 -b 21.02 --single-branch https://github.com/Lienol/openwrt openwrt
+
+# https://github.com/vernesong/OpenClash
+# 您也可以直接拷贝 `luci-app-openclash` 文件夹至其他 `OpenWrt` 项目的 `Package` 目录下随固件编译
+git clone --depth 1 --single-branch -b master https://github.com/vernesong/OpenClash.git openclash
+cp -r openclash/luci-app-openclash/ openwrt/package
+# make menuconfig
+# 选择要编译的包 LuCI -> Applications -> luci-app-openclash
+
 
 cd openwrt
 ../diy-part1.sh
