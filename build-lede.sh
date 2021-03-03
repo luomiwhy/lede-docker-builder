@@ -10,11 +10,11 @@ cp -r openclash/luci-app-openclash/ openwrt/package
 
 
 cd openwrt
-cp /data/diy-part1.sh . && ./diy-part1.sh
+cp -f /data/file/diy-part1.sh . && chomd +x *.sh && ./diy-part1.sh
 ./scripts/feeds clean
 ./scripts/feeds update -a 
 ./scripts/feeds install -a
-cp /data/diy-part2.sh . &&  ./diy-part2.sh
+cp -f /data/file/diy-part2.sh . && chomd +x *.sh &&  ./diy-part2.sh
 
 cp /data/.config .
 # make menuconfig 
