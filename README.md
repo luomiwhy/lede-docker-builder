@@ -11,7 +11,8 @@ docker build -t lede .
 ### run container and clone lede code
 
 ```
-docker run --rm -it -v $(pwd)/../data:/workdir lede
+cd 
+docker run --rm -it -v $(pwd)/:/home/build lede
 
 #export http_proxy=http://192.168.168.159:7890/
 #export https_proxy=http://192.168.168.159:7890/
