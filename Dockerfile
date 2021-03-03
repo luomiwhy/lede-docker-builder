@@ -26,6 +26,7 @@ WORKDIR /home/build
 COPY ./diy-part1.sh /data/diy-part1.sh
 COPY ./diy-part2.sh /data/diy-part2.sh
 COPY ./.config /data/.config
+COPY ./build-lede.sh /data/build-lede.sh
 RUN sudo chmod +x /data/*.sh
 
 CMD ["/bin/bash"]
