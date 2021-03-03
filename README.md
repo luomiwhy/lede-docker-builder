@@ -11,7 +11,8 @@ docker build -t lede .
 ### run container and clone lede code
 
 ```
-docker run --rm -it -v /data/:/home/build/ lede
+sudo mkdir -p /data/dl
+docker run --rm -it -v /data/dl:/home/build/openwrt/dl lede
 
 export ALL_PROXY=http://192.168.*.*:*/
 ```
