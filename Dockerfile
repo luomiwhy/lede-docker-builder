@@ -17,15 +17,16 @@ RUN rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /o
     && apt-get -y autoremove \
     && apt-get -y autoclean \
     && apt-get clean all \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && mkdir /data && chown -R build:build /data 
 
 USER build
 WORKDIR /home/build
 
-COPY ./diy-part1.sh /home/build/diy-part1.sh
-COPY ./diy-part2.sh /home/build/diy-part2.sh
-COPY ./.config /home/build/.config
-RUN sudo chmod +x /home/build/*.sh
+COPY ./diy-part1.sh /data/diy-part1.sh
+COPY ./diy-part2.sh /data/diy-part2.sh
+COPY ./.config /data/.config
+RUN sudo chmod +x /data/*.sh
 
 CMD ["/bin/bash"]
 
