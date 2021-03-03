@@ -1,4 +1,3 @@
-export ALL_PROXY=http://192.168.168.159:7890/
 
 git clone --depth 1 -b 21.02 --single-branch https://github.com/Lienol/openwrt openwrt
 
