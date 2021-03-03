@@ -15,8 +15,7 @@ cp -f /data/file/diy-part1.sh . && chmod +x *.sh && ./diy-part1.sh
 ./scripts/feeds update -a 
 ./scripts/feeds install -a
 cp -f /data/file/diy-part2.sh . && chmod +x *.sh &&  ./diy-part2.sh
-
-cp /data/.config .
+cp -f /data/file/.config .
 # make menuconfig 
 
 #Download package
