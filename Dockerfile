@@ -25,7 +25,7 @@ WORKDIR /home/build
 COPY ./diy-part1.sh /home/build/diy-part1.sh
 COPY ./diy-part2.sh /home/build/diy-part2.sh
 COPY ./.config /home/build/.config
-RUN chmod +x /home/build/*.sh
+RUN sudo chmod +x /home/build/*.sh
 
 CMD ["/bin/bash"]
 
