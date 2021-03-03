@@ -14,9 +14,6 @@ docker build -t lede .
 cd 
 docker run --rm -it -v $(pwd)/:/home/build lede
 
-#export http_proxy=http://192.168.168.159:7890/
-#export https_proxy=http://192.168.168.159:7890/
-#export ftp_proxy=http://192.168.168.159:7890/
 export ALL_PROXY=http://192.168.168.159:7890/
 
 
