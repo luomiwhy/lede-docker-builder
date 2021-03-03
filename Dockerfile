@@ -17,7 +17,8 @@ RUN rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /o
     && apt-get -y autoremove \
     && apt-get -y autoclean \
     && apt-get clean all \
-    && rm -rf /var/lib/apt/lists/* 
+    && rm -rf /var/lib/apt/lists/* \ 
+    && chown -R build:build /home/build
 
 USER build
 WORKDIR /home/build
@@ -26,7 +27,7 @@ WORKDIR /home/build
 # COPY ./diy-part2.sh /data/diy-part2.sh
 # COPY ./.config /data/.config
 # COPY ./build-lede.sh /data/build-lede.sh
-RUN sudo mkdir -p /data/dl && sudo chown -R build:build /home/build /data/dl
+
 
 CMD ["/bin/bash"]
 
