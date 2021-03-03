@@ -12,7 +12,7 @@ docker build -t lede .
 
 ```
 sudo mkdir -p /data/dl
-docker run --rm -it -v /data/dl:/home/build/openwrt/dl lede
+docker run --rm -it -v /data/dl:/data/dl lede
 
 export ALL_PROXY=http://192.168.*.*:*/
 ```
