@@ -11,7 +11,8 @@ docker build -t lede .
 ### run container and clone lede code
 
 ```
-docker run --rm -it -v $(pwd)/:/data/file/ lede
+cd 
+docker run --rm -it -v $(pwd)/:/home/build/ -v $(pwd)/lede-docker-builder/:/data/file/ lede
 
 export ALL_PROXY=http://192.168.*.*:*/
 ```
