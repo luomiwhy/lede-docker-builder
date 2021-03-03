@@ -18,7 +18,7 @@ RUN rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /o
     && apt-get -y autoclean \
     && apt-get clean all \
     && rm -rf /var/lib/apt/lists/* \ 
-    && chown -R build:build /home/build
+    && mkdir -p /home/build/config && chown -R build:build /home/build
 
 USER build
 WORKDIR /home/build
