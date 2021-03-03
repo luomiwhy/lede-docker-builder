@@ -23,11 +23,11 @@ RUN rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /o
 USER build
 WORKDIR /home/build
 
-COPY ./diy-part1.sh /data/diy-part1.sh
-COPY ./diy-part2.sh /data/diy-part2.sh
-COPY ./.config /data/.config
-COPY ./build-lede.sh /data/build-lede.sh
-RUN sudo chmod +x /data/*.sh
+# COPY ./diy-part1.sh /data/diy-part1.sh
+# COPY ./diy-part2.sh /data/diy-part2.sh
+# COPY ./.config /data/.config
+# COPY ./build-lede.sh /data/build-lede.sh
+# RUN sudo chmod +x /data/*.sh
 
 CMD ["/bin/bash"]
 
