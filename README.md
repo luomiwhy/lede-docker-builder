@@ -12,7 +12,7 @@ docker build -t lede .
 
 ```
 sudo mkdir -p /data/dl
-docker run --rm -it -v /data/dl:/data/dl lede
+docker run --rm -it -v /data/dl:/data/dl -v $(pwd)/:/data/file/ lede
 
 export ALL_PROXY=http://192.168.*.*:*/
 ```
