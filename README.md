@@ -18,7 +18,7 @@ export ALL_PROXY=http://192.168.*.*:*/
 ```
 
 ### clean when done
-
+```
 docker container prune -f
 docker image prune -a -f
-
+```
