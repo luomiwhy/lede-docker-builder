@@ -29,12 +29,12 @@ cp -r openclash/luci-app-openclash/ openwrt/package
 
 
 cd openwrt
-../diy-part1.sh
+cp /data/diy-part1.sh . && ./diy-part1.sh
 ./scripts/feeds update -a 
 ./scripts/feeds install -a
-../diy-part2.sh
+cp /data/diy-part2.sh . &&  ./diy-part2.sh
 
-cp ../.config .
+cp /data/.config .
 make menuconfig 
 
 #Download package
