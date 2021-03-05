@@ -26,6 +26,7 @@ cp -r openclash/luci-app-openclash/ openwrt/package
 # make menuconfig
 # 选择要编译的包 LuCI -> Applications -> luci-app-openclash
 
+git clone --depth 1 --single-branch -b main https://github.com/garypang13/luci-app-dnsfilter.git openwrt/package/luci-app-dnsfilter
 
 cd openwrt
 cp -f /data/file/diy-part1.sh . && chmod +x *.sh && ./diy-part1.sh
