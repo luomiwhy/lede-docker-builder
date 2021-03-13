@@ -13,7 +13,7 @@ docker build -t lede .
 
 ```
 cd 
-docker run --rm -it -v /data/lede/:/data/lede/ -v $(pwd)/:/home/build/ -v $(pwd)/lede-docker-builder/:/data/file/ lede
+docker run --rm -it -v /data/lede/:/data/lede/ -v $(pwd)/:/home/build/ lede
 
 cd lede-docker-builder/
 chmod +x *.sh
