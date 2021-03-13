@@ -8,7 +8,7 @@ else
     echo "文件夹已经存在"
 fi
 
-cp -uvr /data/lede/ dl/
+cp -uvr /data/lede/dl/ ./
 make download -j8
 cp -uvr dl/ /data/lede/
 
