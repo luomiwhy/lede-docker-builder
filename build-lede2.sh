@@ -1,4 +1,7 @@
 #!/bin/bash
+
+cd 
+cd openwrt
 #Download package
 if [ ! -d "/data/lede" ];then
     sudo ls 
@@ -8,9 +11,7 @@ else
     echo "文件夹已经存在"
 fi
 
-cp -uvr /data/lede/dl/ ./
 make download -j8
-cp -uvr dl/ /data/lede/
 
 # First Compile the firmware
 make -j1 V=s
