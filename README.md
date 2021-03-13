@@ -16,6 +16,7 @@ cd
 docker run --rm -it -v /data/lede/:/data/lede/ -v $(pwd)/:/home/build/ lede
 
 cd lede-docker-builder/
+git checkout . &&  git pull
 chmod +x *.sh
 ./build-lede1.sh
 ./build-lede2.sh
