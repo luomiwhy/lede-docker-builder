@@ -15,6 +15,7 @@ docker build -t lede .
 cd 
 docker run --rm -it -v $(pwd)/:/home/build/ -v $(pwd)/lede-docker-builder/:/data/file/ lede
 
+cd lede-docker-builder/
 chmod +x *.sh
 ./build-lede1.sh
 ./build-lede2.sh
