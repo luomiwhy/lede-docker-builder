@@ -17,7 +17,7 @@ cd lede-docker-builder/
 git checkout . &&  git pull
 chmod +x *.sh
 git clone --depth 1 -b 21.02 --single-branch https://github.com/Lienol/openwrt openwrt
-docker run --rm -it -v $(pwd)/lede-docker-builder/:/home/build/ -v /data/lede/dl:/home/build/openwrt/dl lede
+docker run --rm -it -v $(pwd)/:/home/build/ -v /data/lede/dl:/home/build/openwrt/dl lede
 
 
 ./build-lede1.sh
